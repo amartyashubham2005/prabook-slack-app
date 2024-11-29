@@ -1,0 +1,16 @@
+version: '3.7'
+services:
+  postgres:
+    image: postgres:latest
+    ports:
+      - '5432:5432'
+    environment:
+      - POSGTRES_DB=prabook
+      - POSTGRES_USER=prabook
+      - POSTGRES_PASSWORD=prabook
+    volumes:
+      - postgres_data_container:/var/lib/postgresql/data
+      - ./devops/dev/cfg/postgres-init.sql:/docker-entrypoint-initdb.d/10-init.sql
+
+volumes:
+  postgres_data_container:
