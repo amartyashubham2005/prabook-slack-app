@@ -55,9 +55,11 @@ PGPORT: string;         # PostgreSQL port (e.g., 5432)
 
 #### Where to Get These Values:
 
-1. **Slack App Credentials**:
-   - Go to the [Slack API Dashboard](https://api.slack.com/apps) and create or manage your app.
-   - Obtain:
+1. **Slack App Credentials**(You can skip creating the slack app if already created):
+   - Navigate to the `slack-config/manifest.json` file in this repository. This file contains the manifest needed to create your Slack app.
+   - Go to the [Slack API Dashboard](https://api.slack.com/apps) and choose the option to **Create an App** by uploading a manifest.
+   - Upload the `manifest.json` file from `slack-config/`.
+   - Once the app is created, obtain the following credentials from the Slack App Settings:
      - `CLIENT_ID`
      - `CLIENT_SECRET`
      - `SIGNING_SECRET`
